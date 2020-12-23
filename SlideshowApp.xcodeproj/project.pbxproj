@@ -13,6 +13,7 @@
 		5C4BFFB325922C34007AFDA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C4BFFB125922C34007AFDA1 /* Main.storyboard */; };
 		5C4BFFB525922C35007AFDA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C4BFFB425922C35007AFDA1 /* Assets.xcassets */; };
 		5C4BFFB825922C35007AFDA1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C4BFFB625922C35007AFDA1 /* LaunchScreen.storyboard */; };
+		5C5558BD2592CE070066606C /* TransViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5558BC2592CE070066606C /* TransViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		5C4BFFB425922C35007AFDA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C4BFFB725922C35007AFDA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C4BFFB925922C35007AFDA1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C5558BC2592CE070066606C /* TransViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				5C4BFFAB25922C34007AFDA1 /* AppDelegate.swift */,
 				5C4BFFAD25922C34007AFDA1 /* SceneDelegate.swift */,
 				5C4BFFAF25922C34007AFDA1 /* ViewController.swift */,
+				5C5558BC2592CE070066606C /* TransViewController.swift */,
 				5C4BFFB125922C34007AFDA1 /* Main.storyboard */,
 				5C4BFFB425922C35007AFDA1 /* Assets.xcassets */,
 				5C4BFFB625922C35007AFDA1 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				5C4BFFB025922C34007AFDA1 /* ViewController.swift in Sources */,
 				5C4BFFAC25922C34007AFDA1 /* AppDelegate.swift in Sources */,
 				5C4BFFAE25922C34007AFDA1 /* SceneDelegate.swift in Sources */,
+				5C5558BD2592CE070066606C /* TransViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
