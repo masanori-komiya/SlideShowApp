@@ -10,6 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var nextButton: UIButton!
+    
+    @IBOutlet weak var backButton: UIButton!
+    
     @IBOutlet weak var startstopButton: UIButton!
     
     @IBOutlet weak var imageView: UIImageView!
@@ -27,43 +31,47 @@ class ViewController: UIViewController {
     }
     
     @IBAction func nextImage(_ sender: Any) {
-        if (self.timer == nil) {
-            if nowIndex == 3 {
-                nowIndex = 0
-            } else {
-                nowIndex += 1
-            }
-            imageView.image = imageArray[nowIndex]
+        if nowIndex == 3 {
+            nowIndex = 0
+        } else {
+            nowIndex += 1
         }
+        imageView.image = imageArray[nowIndex]
     }
     
     @IBAction func backImage(_ sender: Any) {
-        if (self.timer == nil) {
-            if nowIndex == 0 {
-                nowIndex = 3
-            } else {
-                nowIndex -= 1
-            }
-            imageView.image = imageArray[nowIndex]
+        if nowIndex == 0 {
+            nowIndex = 3
+        } else {
+            nowIndex -= 1
         }
+        imageView.image = imageArray[nowIndex]
     }
+    
     @IBAction func slideShowButton(_ sender: Any) {
         if(self.timer == nil) {
             self.timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(changeImage), userInfo: nil, repeats: true)
             startstopButton.setTitle("停止", for: .normal)
+            
+            nextButton.isEnabled = false
+            backButton.isEnabled = false
         } else {
             self.timer.invalidate()
             
             self.timer = nil
             
             startstopButton.setTitle("再生", for: .normal)
+            
+            nextButton.isEnabled = true
+            backButton.isEnabled = true
         }
     }
     
     @objc func changeImage() {
-        nowIndex += 1
         if nowIndex == 3 {
             nowIndex = 0
+        } else {
+            nowIndex += 1
         }
         imageView.image = imageArray[nowIndex]
     }
@@ -72,9 +80,13 @@ class ViewController: UIViewController {
         // segueから遷移先のResultViewControllerを取得する
         let transViewController:TransViewController = segue.destination as! TransViewController
         transViewController.x = nowIndex
-        self.timer.invalidate()
-        self.timer = nil
-        startstopButton.setTitle("再生", for: .normal)
+        if(self.timer != nil ){
+            self.timer.invalidate()
+            self.timer = nil
+            startstopButton.setTitle("再生", for: .normal)
+            nextButton.isEnabled = true
+            backButton.isEnabled = true
+        }
     }
     
     @IBAction func unwind(_ segue: UIStoryboardSegue) {
