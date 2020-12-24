@@ -52,10 +52,6 @@
 			children = (
 				5C4BFFAA25922C34007AFDA1 /* SlideshowApp */,
 				5C4BFFA925922C34007AFDA1 /* Products */,
-				5C4AAF96259496010039E20B /* 1.png */,
-				5C4AAF98259496060039E20B /* 2.png */,
-				5C4AAF9A2594960A0039E20B /* 3.png */,
-				5C4AAF9C2594960E0039E20B /* 4.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +74,10 @@
 				5C4BFFB425922C35007AFDA1 /* Assets.xcassets */,
 				5C4BFFB625922C35007AFDA1 /* LaunchScreen.storyboard */,
 				5C4BFFB925922C35007AFDA1 /* Info.plist */,
+				5C4AAF96259496010039E20B /* 1.png */,
+				5C4AAF98259496060039E20B /* 2.png */,
+				5C4AAF9A2594960A0039E20B /* 3.png */,
+				5C4AAF9C2594960E0039E20B /* 4.png */,
 			);
 			path = SlideshowApp;
 			sourceTree = "<group>";
